@@ -27,7 +27,7 @@ END='\e[0m'
 add-ip() {
     today=`date -d "0 days" +"%Y-%m-%d"`
     ran=$(date +%s)
-    git clone https://github.com/andre7/kintil.git /root/ipvps/ &> /dev/null
+    git clone https://github.com/OrderMyAutoScript/kintil.git /root/ipvps/ &> /dev/null
     clear
     read -p "Input IP Address : " ip
     CLIENT_EXISTS=$(grep -w $ip /root/ipvps/ip | wc -l)
@@ -64,15 +64,15 @@ add-ip() {
     echo "### ${name}${unix} $ran ${exp2} ${ip} V3.0" >> /root/ipvps/ip
     fi
     cd /root/ipvps
-    git config --global user.email "sakti7asa@gmail.com" &> /dev/null
-    git config --global user.name "andre7" &> /dev/null
+    git config --global user.email "ordermyautoscript@hotmail.com" &> /dev/null
+    git config --global user.name "OrderMyAutoScript" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m REGISTER-IP &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/andre7/kintil
-    git push -f https://ghp_pMYvgV7kzc9F1V5DSLMmrBMJOCe1gpTJM@github.com/andre7/kintil.git &> /dev/null
+    git remote add origin https://github.com/OrderMyAutoScript/kintil
+    git push -f https://ghp_pMYvgV7kzc9F1V5DSLMmrBMJOCe1gpTJM@github.com/OrderMyAutoScript/kintil.git &> /dev/null
     rm -rf /root/ipvps
     clear
     echo -e "${CYAN}Succesfully Add IP Address${NC}"
@@ -87,7 +87,7 @@ add-ip() {
 
 del-ip() {
     rm -rf /root/ipvps
-    git clone https://github.com/andre7/kintil.git /root/ipvps/ &> /dev/null
+    git clone https://github.com/OrderMyAutoScript/kintil.git /root/ipvps/ &> /dev/null
     clear
     echo "List IP Address Have Been Registered"
     echo ""
@@ -104,15 +104,15 @@ del-ip() {
     sed -i "/^### $name $oid $exp $ipdel/,/^},{/d" /root/ipvps/ip
     fi
     cd /root/ipvps
-    git config --global user.email "sakti7asa@gmail.com" &> /dev/null
-    git config --global user.name "andre7" &> /dev/null
+    git config --global user.email "ordermyautoscript@hotmail.com" &> /dev/null
+    git config --global user.name "OrderMyAutoScript" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m REGISTER-IP &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/andre7/kintil
-    git push -f https://ghp_vG0OtdVMU0vIB85teJ95Ee3qj47Wn1Y@github.com/andre7/kintil.git &> /dev/null
+    git remote add origin https://github.com/OrderMyAutoScript/kintil
+    git push -f https://ghp_vG0OtdVMU0vIB85teJ95Ee3qj47Wn1Y@github.com/OrderMyAutoScript/kintil.git &> /dev/null
     rm -rf /root/ipvps
     clear
     echo "Succesfully Deleted The IP Address"
@@ -121,7 +121,7 @@ del-ip() {
 
 renew-ip() {
     rm -rf /root/ipvps
-    git clone https://github.com/andre7/kintil.git /root/ipvps/ &> /dev/null
+    git clone https://github.com/OrderMyAutoScript/kintil.git /root/ipvps/ &> /dev/null
     clear
     echo "List IP Address Have Been Registered"
     echo ""
@@ -140,15 +140,15 @@ renew-ip() {
     exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
     sed -i "s/### $name $oid $exp $ipdel/### $name $oid $exp4 $ipdel/g" /root/ipvps/ip
     cd /root/ipvps
-    git config --global user.email "sakti7asa@gmail.com" &> /dev/null
-    git config --global user.name "andre7" &> /dev/null
+    git config --global user.email "ordermyautoscript@hotmail.com" &> /dev/null
+    git config --global user.name "OrderMyAutoScript" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m REGISTER-IP &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/andre7/kintil
-    git push -f https://ghp_vG0OtdVMU0vIB85teJ95Ee3qj47Wn1Y@github.com/andre7/kintil.git &> /dev/null
+    git remote add origin https://github.com/OrderMyAutoScript/kintil
+    git push -f https://ghp_vG0OtdVMU0vIB85teJ95Ee3qj47Wn1Y@github.com/OrderMyAutoScript/kintil.git &> /dev/null
     rm -rf /root/ipvps
     clear
     echo "Succesfully Renew The IP Address"
